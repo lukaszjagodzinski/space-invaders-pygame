@@ -233,10 +233,11 @@ class SpaceInvadersGame(object):
                 if enemy_bullet > 600:
                     self.enemies_bullets.remove(enemy_bullet)
 
-                if check_collision(enemy_bullet.x, enemy_bullet.y, self.player_x, self.player_y) and \
-                   enemy_bullet in self.enemies_bullets:
-                      self.enemies_bullets.remove(enemy_bullet)
-                      self.life -= 1
+                if (check_collision(enemy_bullet.x, enemy_bullet.y, self.player_x, self.player_y) and
+                    enemy_bullet in self.enemies_bullets
+                ):
+                    self.enemies_bullets.remove(enemy_bullet)
+                    self.life -= 1
 
             for bullet in self.bullets_array:
                 bullet.update()
