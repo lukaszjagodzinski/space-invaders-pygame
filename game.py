@@ -214,7 +214,6 @@ class SpaceInvadersGame(object):
                         enemy.update(self.surface, 0, 5)
                     elif not moving:
                         dirx = 1
-                    enemy.speed = 3
                     enemy.update(self.surface, dirx)
 
             if enemy_can_shoot:
