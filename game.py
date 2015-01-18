@@ -207,12 +207,10 @@ class SpaceInvadersGame(object):
                     if enemies[-1].x > 765:
                         dirx = -1
                         moving = True
-                        enemy.speed = 0
                         enemy.update(self.surface, 0, 5)
                     elif enemies[0].x < 0:
                         dirx = 1
                         moving = True
-                        enemy.speed = 0
                         enemy.update(self.surface, 0, 5)
                     elif not moving:
                         dirx = 1
